@@ -6,10 +6,10 @@ h1 {
   color: blue;
 }
 p {
-  color: red;
+  color: white;
   font-family: verdana;
   font-size: 150%;
-  padding: 30pt;
+  padding:10pt;
 }
 a:link {
   color: green;
@@ -29,5 +29,13 @@ a:hover {
 a:active {
   color: yellow;
   background-color: transparent;
-  text-decoration:solid;
+  text-decoration: solid;
+}
+
+p:hover {
+  color: brown;
+}
+
+input {
+  padding: 30px;
 }
