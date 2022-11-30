@@ -1,9 +1,11 @@
 body {
   background-color: powderblue;
   margin: 50px;
+  scroll-behavior: smooth;
 }
 h1 {
   color: blue;
+  font-size: 10vw;
 }
 p {
   color: white;
@@ -21,10 +23,13 @@ a:visited {
   background-color: transparent;
   text-decoration: dotted;
 }
-a:hover {
-  color: red;
-  background-color: transparent;
-  text-decoration: solid;
+a{
+  background:linear-gradient(#c11063 0 0)var(--p,0)/var(--p,0) no-repeat;
+  transition: .4s ,background-position  .0s;
+}
+a:hover{
+  --p:100%;
+  color:ffff;
 }
 a:active {
   color: yellow;
@@ -38,4 +43,23 @@ p:hover {
 
 input {
   padding: 30px;
+  color: brown;
+  size: 5px;
+}
+input:hover{
+  color:red;
+  
+}
+.left,.right{
+  float: left;
+  width: 20%;
+}
+.main{
+  float:left;
+  width: 20%;
+}
+@media screen and(max-width: 800px){
+  .left, .main, .right{
+    width: 100%;
+  }
 }
