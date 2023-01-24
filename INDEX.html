@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,28 +13,40 @@
 
     <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico" />
   </head>
-  
+
   </style>
-  <nav> <a href="/login.html">LOGIN</a></li>
-  <a href="/DASHboard.html">DASHBOARD</a></li>
+  <nav>
+    <a href="/login.html">LOGIN</a>
+    <a href="/DASHboard.html">DASHBOARD</a>
   </nav>
+
   <body>
-    <h1>Hey</h1>
-    <h3>the</h3>
-    hello world
-    <p>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum optio at ad
-      eos iste, corrupti, aperiam earum nesciunt cupiditate ex quis maiores
-      deleniti dolorum exercitationem veniam atque possimus nulla dolor?
-    </p>
-    <button type="button" onclick="myFunction()">click me</button>
-    <p id="demo"></p>
+    <canvas id="myCanvas" width="200" height="100"></canvas>
     <script>
-      function myFunction() {
-        document.getElementById("demo").innerHTML = "hello javascribt";
-      }
+      var c=document.getElementById("myCanvas");
+      var ctx=c.getContext("2d");
+      ctx.font="30px Arial";
+      ctx.strokeText("hello world",10,50);
     </script>
-    
-    <input type="file" />
+    <div class="container">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing <br> Cum optio at ad
+      eos iste, corrupti, <br>aperiam earum nesciunt cupiditate ex quis maiores
+      deleniti dolorum <br> exercitationem veniam atque possimus nulla dolor?
+    </p>
+    </div>
+    <div class="container2">
+      
+    </div>
+<!-- <svg viewbox="0 0 100 100">
+  <circle cx="50" cy="50" r="1"?/>
+  <script>
+    document.querySelector('circle').addEventListener('click', e =>{e.target.style.fill=" blue";})
+  </script>
+</svg>
+</svg> -->
+
+    <input type="file"  multiple>
+  <button>click me</button>
   </body>
+
 </html>

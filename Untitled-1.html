@@ -4,41 +4,57 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico" />
+    <link rel="stylesheet" href="/style.css" />
     <title>Document</title>
-    <style>
-      table,
-      tr,
-      td,
-      th {
-        border: 1px solid black;
-        border-style: none;
-        border-collapse: collapse;
-      }
-      th,
-      td {
-        background-color: aqua;
-      }
-      th {
-        text-align: left;
-      }
-    </style>
   </head>
   <body>
-    <table style="width: 100%">
-        <caption>names of individuals</caption>
-      <tr>
-        <th>person1</th>
-        <td>judy</td>
-      </tr>
-      <tr>
-        <th>person2</th>
-        <td>peter</td>
-      </tr>
-      <tr>
-        <th>person3</th>
-        <td>zakaria</td>
-      </tr>
-    </table>
+    <div class="wrapper">
+      <div class="container">
+        <div class="boxbg">one</div>
+        <div class="box">two</div>
+        <div class="boxb">three</div>
+      </div>
+      <div class="select">
+        <label for="select">
+          <select name="select" id="switcher">
+            <option value="row">row</option>
+            <option value="row-reverse">row-reverse</option>
+            <option value="column">column</option>
+            <option value="column-reverse">column-reverse</option>
+          </select>
+        </label>
+      </div>
+    </div>
+    <script>
+      const switcher = document.getElementById("switcher");
+      const demo = document.querySelector(".container");
+      switcher.addEventListener("change", (evt) => {
+        demo.style.flexDirection = evt.target.value;
+      });
+    </script>
+    <div class="new">
+      <div class="item">
+        <p>Lorem ipsum dolor, sit amet consenter adipisicing Cum optio at ad eos
+        iste, corrupti, aperiam earum nesciunt cupiditate ex quis maiores
+        deleniti dolorum exercitationem veniam atque possimus nulla dolor?</p>
+      </div>
+      <div class="item">
+       <p> Lorem ipsum dolor, sit amet consenter adipisicing Cum optio at ad eos
+        iste, corrupti, aperiam earum nesciunt cupiditate ex quis maiores
+        deleniti dolorum exercitationem veniam atque possimus nulla dolor?</p>
+      </div>
+      <div class="item">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing Cum optio at ad eos
+        iste, corrupti, aperiam earum nesciunt cupiditate ex quis maiores
+        deleniti dolorum exercitationem veniam atque possimus nulla dolor?</p>
+      </div>
+    </div>
+    <ul>
+      <li> abcne
+      </li>
+      <li>rhti</li>
+    </ul>
+    <div class="pulse"></div>
   </body>
 </html>

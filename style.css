@@ -1,0 +1,132 @@
+:root {
+  --brown: #f3cf79;
+  --background: #cefff0;
+}
+body{
+  background-color: rgb(243, 243, 243);
+}
+
+.container {
+  text-align: center;
+  font-weight: bolder;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background-color: var(--background);
+}
+.boxbg {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 50px;
+  border: 1px solid black;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+}
+.box {
+  width: 100%;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 50px;
+  height: 100px;
+  border: 1px solid;
+}
+.boxb{
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 50px;
+  width: 100%;
+  height: 100px;
+  border: 1px solid;
+}
+.box:nth-child(1) {
+  order: 1;
+}
+.box:nth-child(3) {
+  order: 3;
+}
+select {
+  min-width: 80px;
+}
+.new {
+  display: grid;
+  gap: 1em;
+  /* grid-template-columns: repeat( auto-fit) ,minmax(50px, 1fr); */
+  grid-auto-flow: column;
+  padding: 5px;
+  width:auto;
+}
+.item {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 50px;
+  border: 1px solid var(--brown);
+  inset-block-end: 0.2em;
+  padding: 2px;
+  font-size: 14px;
+  font-family: "Segoe UI", sans-serif;
+}
+p::first-letter{
+  color: blue;
+  font-weight: bold;
+  font-size: large;
+  margin-inline-end: 5px;
+}
+p::before{
+  content: ""; 
+}
+::selection{
+  background-color: aqua;
+  color:red;
+} 
+.pulse{
+  margin: 25px;
+  padding: 20px;
+  width: 30px;
+  height: 30px;
+  background: rebeccapurple;
+  position: relative;
+  border-radius: 10%;
+  animation: move 7s infinite alternate;
+  /* animation-timing-function: steps(10, end); */
+
+}
+/* .pulse::after{
+  animation: move 1000ms cubic-bezier(0.9, 0.7, 0.5, 0.9) infinite;
+} */
+@keyframes move{
+  0%{
+    opacity: 0;
+  }
+  50%{
+    transform: scale(1.6);
+    opacity: 1;
+  }
+  from{
+    transform: translateX(0px);
+  }
+  to{
+    transform: translateX(1350px);
+  }
+}
+.pulse::after{
+  content:"" ;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: blueviolet;
+  border-radius: 10%;
+  z-index: -1;
+}
+.pulse:hover{
+  animation-play-state: paused;
+  
+}
+::marker{
+  color: hotpink;
+ content:'❣'
+}

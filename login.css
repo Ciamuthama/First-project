@@ -1,0 +1,117 @@
+*{
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    display: block;
+    background-image: url(./Saved\ Pictures/wallpaperflare.com_wallpaper.jpg);
+    /* background-image: linear-gradient(#5efce8,#00a4ad, #2dfdcb); */
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-clip: border-box;
+    height: 100%;
+}
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    font-family:system-ui,;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    text-align: center;
+    text-transform: capitalize;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.details{
+    display: flex;
+    place-content: center;
+    flex-wrap:wrap;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 50px;
+    position: absolute;
+    margin:0 auto;
+    top: 50%;
+    left: 50%;
+    right: 50%;
+    width: min(80%, 380px);
+    height: max(40%, 400px);
+    padding:10px;
+    transform: translate(-50%,-50%);
+    background-color: rgba(255, 255, 255, 0);
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.021);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.377);
+    border-radius: 10px;
+    backdrop-filter:blur(10px);
+   }
+#myForm{
+    transition: opacity 0.5s ease-in-out;
+}
+
+.login{
+    position: relative;
+}
+input{
+    color: white;
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    border-width: thin;
+    outline: none;
+    background: transparent;
+}
+::placeholder{
+    color: white;
+    opacity: 1;
+}
+.input-field:focus::placeholder{
+    
+    font-family: system-ui;
+    opacity: 0;
+    transition: .3s;
+}
+.btn{
+   border: none;
+   border-radius: 4px;
+   font-weight: bold;
+   font-size: .8em;
+   font-family: system-ui;
+   text-transform: uppercase;
+   padding:10px 15px;
+   margin:15px auto;
+   background-color: #ffe07c;
+   color: #5e6681;
+   box-shadow: 0 8px 24px 0 rgba(109, 109, 109, 0.363);
+   transition: all 0.3s ease-in-out;
+}
+.btn:hover{
+    background-color: #5e6681;
+    color: #ffeba7;
+    box-shadow: 0 8px 24px 0 rgba(16, 38, 112, 0.507);
+}
+.btn:active{
+    transform: scale(0.99);
+    box-shadow: none;
+}
+a{
+    position: relative;
+    gap:1rem ;
+    border: none;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: .8em;
+    font-family: system-ui;
+    text-transform: uppercase;
+    text-align: center;
+    padding:5px;
+    margin-top:4px;
+    background-color: #ffe07c;
+    color: #5e6681;
+    box-shadow: 0 8px 24px 0 rgba(109, 109, 109, 0.301);
+    transition: all 0.3s ease-in-out;
+}

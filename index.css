@@ -1,35 +1,51 @@
 body {
-  background-color: powderblue;
+  background-image: linear-gradient(to bottom, #00ccff, #0099ff);
+  background-repeat: round;
   margin: 50px;
-  scroll-behavior: smooth;
+  scroll-behavior: initial;
+  cursor: pointer;
+  
 }
-h1 {
-  color: blue;
-  font-size: 10vw;
+#myCanvas {
+  display: flex;
+  justify-content: flex-end;
+  clear: left;
 }
-p {
+.container{
+  border: 1px;
+  text-align: left;
   color: white;
   font-family: verdana;
   font-size: 150%;
-  padding:10pt;
+ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-a:link {
-  color: green;
-  background-color: transparent;
-  text-decoration: none;
+.container2{
+  display: flex;
+  
+  justify-content:right;
+  align-items: right;
 }
 a:visited {
-  color: pink;
+  color: rgb(228, 32, 97);
+  
+}
+a:link {
+  color: rgb(82, 2, 2);
   background-color: transparent;
-  text-decoration: dotted;
+  text-decoration: none;
+  
 }
-a{
-  background:linear-gradient(#c11063 0 0)var(--p,0)/var(--p,0) no-repeat;
-  transition: .4s ,background-position  .0s;
+a {
+  background: linear-gradient(#c11063 0 0) var(--p, 0) / var(--p, 0) no-repeat;
+  transition: 0.4s, background-position 0.2s 0.3s;
 }
-a:hover{
-  --p:100%;
-  color:ffff;
+a:hover {
+  --p: 100%;
+  color: ffff;
+  cursor: pointer;
 }
 a:active {
   color: yellow;
@@ -46,20 +62,53 @@ input {
   color: brown;
   size: 5px;
 }
-input:hover{
-  color:red;
-  
+input:hover {
+  color: red;
 }
-.left,.right{
+.left,
+.right {
   float: left;
   width: 20%;
 }
-.main{
-  float:left;
+.main {
+  float: left;
   width: 20%;
 }
-@media screen and(max-width: 800px){
-  .left, .main, .right{
-    width: 100%;
+@media screen and(max-width: 800px) {
+  .left,
+  .main,
+  .right {
+    width: 10%;
   }
+}
+
+circle {
+ 
+  fill: blue;
+  animation: pulse 3s alternate infinite;
+}
+@keyframes pulse {
+  100% {
+    r: 30;
+  }
+}
+button{
+  background-color: darkmagenta;
+  border:none;
+  border-radius: 5px;
+  font-size: 24px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-transform: uppercase;
+  color: white;
+}
+button:active{
+  transform: scale(0.97);
+  box-shadow: none;
+  border-radius: 10px;
+}
+button:focus{
+  outline: 2px dotted black;
+  outline-offset:3px;
+  background-color: aqua; 
+
 }

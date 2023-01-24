@@ -1,38 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8" /> 
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico" />
+  
+    <link rel="stylesheet" href="login.css" />
   </head>
-  <body>
-    <button>
-      <a href="/INDEX.html"><img src="./Saved Pictures/icons8_home.ico" width="24px"></a>
-    </button>
-   
-    <h1>login</h1>
-    <form>
-      <label for="">email</label>
-      <input type="email">
-      <div>
-        <label for="">password</label>
-        <input type="password" />
+  <body onload="Allowcockies()">
+    <nav> 
+    
+    <a href="./Untitled-1.html">Untitled</a>
+    <a href="./INDEX.html">Home</a>
+    </nav>
+    <form id="myForm" name="forms" class="details">
+      <h1>Create your account</h1>
+      <div class="Login">
+        <label for=""></label><br />
+        <input
+          name="email" type="email"
+          id="email" 
+          placeholder="Email" class="input-field"
+          required="Email"
+          autocomplete="on"
+        />
       </div>
-      <div>
-        <label for="">confirm <span>password</span></label>
-        <input type="password" />
+      <div class="Login">
+        <label for=""></label><br />
+        <input
+          name="password" type="password"
+          id="password" 
+          placeholder="Password" class="input-field" title="password must contain at least one special character and a number  "
+          minlength="6"
+          required
+        />
       </div>
-      <button onclick="">submit</button>
-      <br>
-      <br>
-      <input type="radio" id="html" name="favurite" value="html">
-      <label for="radio">html</label>
-      <input type="radio" id="html" name="favurite" value="html">
-      <label for="radio">html</label>
-      <input type="radio" id="html" name="favurite" value="html">
-      <label for="radio">html</label>
+      <div class="Login">
+        <label for=""></label><br />
+        <input
+         name="password2" type="password"
+          id="confirmPassword" value=""
+          placeholder="Confirm Password" class="input-field"
+          autocomplete="current-password" required
+        />
+      </div>
+      <br />
+        <button class="btn" id="submit" type="submit" >Submit</button>
     </form>
+    <script type="text/javascript" src="login.js"></script>
   </body>
+
 </html>

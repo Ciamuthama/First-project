@@ -1,0 +1,101 @@
+.wrapper{
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.rectangle{
+    width: 150px;
+    max-height: 100px;
+    background-color:darkblue;
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+    padding: 8px;
+    margin-bottom: 4px;
+    transform-origin: 0 0;
+    transform: translateX(-100px);
+    opacity: 0;
+    transition-property: transform, opacity;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+}
+.wrapper:is(:hover, :focus) .rectangle{
+    transform: translateX(0);
+    opacity: 100%;
+}
+.wrapper .rectangle:nth-of-type(1){
+    transition-delay: 0ms;
+}
+.wrapper .rectangle:nth-of-type(2){
+    transition-delay: 100ms;
+}
+.wrapper .rectangle:nth-of-type(3){
+    transition-delay: 200ms;
+}
+.wrapper .rectangle:nth-of-type(4){
+    transition-delay: 300ms;
+}
+.wrapper .rectangle:nth-of-type(5){
+    transition-delay: 400ms;
+}
+.wrapper p{
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+body{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+}
+.wrp{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.square{
+    width: 150px;
+    height: 150px;
+    margin: 8px;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background-color: white;
+    transition-property: box-shadow, transform;
+    transition-duration: 350ms;
+    transition-timing-function: ease;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.329);
+}
+.square:is(:hover, :focus){
+    box-shadow: 1px 8px 10px 1px rgba(107, 107, 107, 0.301);
+    transform: translateY(-8px);
+}
+.bubble{
+    width: 10px;
+    height: 10px;
+    background-color: aquamarine;
+    border-radius: 100%;
+    text-align: center;
+    padding: 16px;
+    font-size: 2em;
+    margin: 2px;
+    transition: all 5s ease-in 200ms;
+}
+.bubble:is(:hover, :focus){
+    background-color: paleturquoise;
+    transform: scale(1.60);
+    opacity: 0.8;
+    transition: transform 150ms cubic-bezier(0.5, 1.75, 0.75, 1.25);
+}
+.wp{
+    display: flex;
+    flex-wrap: wrap;
+    width: 270px;
+    height: 80px;
+    padding: 0;
+}
